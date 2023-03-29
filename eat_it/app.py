@@ -2,6 +2,9 @@ from flask import Flask, Response, request, jsonify
 
 app = Flask(__name__)
 
+@app.get('/')
+def index():
+    return 'Hello, World!'
 
 @app.get("/ping")
 def ping():
